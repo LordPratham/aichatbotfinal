@@ -107,7 +107,7 @@ if __name__ == "__main__":
     retriever = db.as_retriever(search_type="similarity", search_kwargs={"k": 3})
     
     # Initialize the Google model for AI responses
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash",api_key="AIzaSyAwHWjFQqU-3pdzDzsvFb0awAz2u5RpM-8")
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash",api_key=google_api_key)
 
     # Initialize the conversational retrieval chain
     conversational_chain = ConversationalRetrievalChain.from_llm(
